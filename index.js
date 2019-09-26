@@ -2,7 +2,7 @@
 
 const validate = () => {
 
-    const form = document.querySelector('#myForm');
+    const form = document.querySelector('#sign-up-form');
     const fname = form.firstname;
     const lname = form.lastname;
     const email = form.email;
