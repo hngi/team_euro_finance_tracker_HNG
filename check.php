@@ -18,7 +18,7 @@ function clean_input($data) { // cleans the form input
         // check if all form data are submited, else output error message
         if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm'])) {
         // if form fields are empty, outputs message, else, gets their data
-        if(empty($_POST['firstname']) || isset($_POST['lastname']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm'])) {
+        if(empty($_POST['firstname']) || empty($_POST['lastname']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm'])) {
          
           $message = '<div class="alert alert-warning alert-dismissible fade show" role="alert">**All fields are required**<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
 
@@ -132,7 +132,7 @@ function clean_input($data) { // cleans the form input
               $email = (string) $email;
               if( (strcasecmp($retrieved_email,$email) == 0) && ($user_data->password === $password)){ // check if password and email match existing ones
        
-               $_SESSION['name'] = $user_data->name; // stores the name of the user in a session
+               $_SESSION['fname'] = $user_data->fname; // stores the name of the user in a session
                 header('location: dashboard.php'); 
 
               

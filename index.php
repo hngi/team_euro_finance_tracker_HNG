@@ -1,19 +1,21 @@
+<?php 
+
+include 'check.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/sign-in.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,500,600,700&display=swap"
-      rel="stylesheet"/>
-      <link rel="stylesheet" href="css/style.css">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- Fonts  -->
-      <link href="css/fontawesome.min.css">
-  	<title>Log_in</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Euro finance tracker welcome</title>
+    <!--<link rel="stylesheet" type="text/css" href="./css/sign-up.css"> -->
+        <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fonts  -->
+    <link href="css/fontawesome.min.css">
   </head>
   <body>
   	<div class="main">
@@ -22,7 +24,7 @@
         <div class="logo">
     			<img src="./frame.svg" alt="logo image" />
           <p><h1 class="logo__text">euros.com</h1></p>
-    		</div>
+        </div>
         <div id="display">
           <?php if(isset($_SESSION['msg'])):?>
             <?=$_SESSION['msg']?>
@@ -51,8 +53,13 @@
                 <span class="pull-r"><a href="#">forgot password?</a></span>
               </div>
               <input type="submit" name="signin" id="button" value="LOGIN" class="btn-black btn-lg btn-block">
-          </form>
-    </div>
+            </form>
+            <div class="sw-50 text-center">
+              <p class="ptop-s">No account yet? <a href="sign-up.php">Sign Up</a></p>
+              <i class="fa social fa-3x fa-facebook-square fcolor"></i><i class="fa fa-3x fa-twitter-square tcolor"></i>
+            </div>
+        </div>
+      </div>
     
     <script src="index.js"></script>
     <script src="js/jquery.min.js"></script>

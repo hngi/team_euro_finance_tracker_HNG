@@ -1,7 +1,7 @@
 <?php
 include 'check.php';
 
-if(!isset($_SESSION['name'])) { // checks to see if there is a session for the user
+if(!isset($_SESSION['fname'])) { // checks to see if there is a session for the user
   header('location: index.php');
 }
 
@@ -12,14 +12,13 @@ if(!isset($_SESSION['name'])) { // checks to see if there is a session for the u
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Euro finance app</title>
-    
-    
-    <!-- CSS -->
-  
-     <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--Font Awesome-->
+    <title>Euro finance tracker welcome</title>
+    <!--<link rel="stylesheet" type="text/css" href="./css/sign-up.css"> -->
+        <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fonts  -->
     <link href="css/fontawesome.min.css">
 
    

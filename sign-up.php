@@ -1,6 +1,13 @@
+<?php 
+
+include 'check.php'
+?>
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Euro finance tracker sign up</title>
 	<!--<link rel="stylesheet" type="text/css" href="./css/sign-up.css"> -->
 	    <!-- CSS -->
@@ -22,7 +29,7 @@
 			</div>
 			<h2 class = "pbtm-s sw-50 align_text_left">SIGN UP</h2>
 			<br>
-			<form class="sw-50" action="" method = "POST" action="<?=$_SERVER['SCRIPT_NAME']?>">				
+			<form class="sw-50" id="sign-up-form" method = "POST" action="<?=$_SERVER['SCRIPT_NAME']?>">				
 				<div class="form-group">
                     <label for="InputName">First Name</label>
                     <input type="text" class="form-control" name="firstname" id="InputFirstName" aria-describedby="firstnameHelp" placeholder="Enter first Name" required>
