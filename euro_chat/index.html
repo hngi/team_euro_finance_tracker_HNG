@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Chatbot</title>
+        <link rel = "stylesheet"
+   type = "text/css"
+   href = "Eurobot.css" />
+   <script src="Eurobot.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Euro Chatbot</h1>
+			<!-- Trigger/Open The Modal -->
+            <button id="myBtn">Click Me</button>
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Quick commands to try</h2>
+                </div>
+                <div class="modal-body">
+                  <p>How old are you?</p><hr>
+                  <p>what is 10*10*10</p><hr>
+                  <p>are you a bot</p><hr>
+                  <p>How are you</p><hr>
+                  <p>what is your name</p>
+                </div>
+                <div class="modal-footer">
+                  <h3>try now</h3>
+                </div>
+              </div>
+            
+            </div>
+			<h2>Welcome!</h2>
+		</header>
+		<div id="chatarea"></div>
+		<form onsubmit="send(this); return false;">
+			<input type="text" placeholder="Share your thoughts"/>
+			<input type="submit" value="Send"/>
+		</form>
+		
+		<script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
+	</body>
+</html>

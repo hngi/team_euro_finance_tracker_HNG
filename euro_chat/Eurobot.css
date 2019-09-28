@@ -1,0 +1,193 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#chatarea{
+	margin-top: 30px;
+}
+
+.bot, .user {
+	padding: 5px;
+	height: 40px;
+	font-size: 20px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	position: absolute;
+}
+.bot::before, .user::after {
+	content: "-";
+	display: inline-block;
+	color: transparent;
+	background-color: transparent;
+	width: 0;
+	height: 0;
+	position: relative;
+	top: 40px;
+}
+.bot {
+	background-color: lightcoral;
+	left: 10px;
+}
+.bot::before {
+	border-top: 20px solid lightcoral;
+	border-right: 20px solid transparent;
+	left: 10px;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+.user {
+	background-color: lightskyblue;
+	right: 10px;
+}
+.user::after {
+	border-top: 20px solid lightskyblue;
+	border-left: 20px solid transparent;
+	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+}
+header {
+	border-bottom: 3px solid lightgreen;
+	text-align: center;
+}
+header h1 {
+	font-family: fantasy;
+	font-weight: bolder;
+}
+header h2 {
+	font-family: fantasy;
+	font-weight: normal;
+}
+form {
+	width: 100%;
+	position: fixed;
+	bottom: 1px;
+}
+form input[type="text"] {
+	width: calc(100% - 100px);
+	height: 40px;
+	font-family: sans-serif;
+	font-size: 13px;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+form input[type="text"]:focus {
+	font-size: 14px;
+}
+form input[type="submit"] {
+	width: 80px;
+	height: 40px;
+	background-color:darkolivegreen;
+	font-size: 15px;
+	BORDER: NONE;
+    padding: 12px;
+    color: lemonchiffon;
+    box-shadow: 4px 5px #888888;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+
+/* Modal CSS */
+/* The Close Button */
+/* button{ */
+    
+
+#myBtn {
+    float:right;
+    BORDER: NONE;
+    padding: 12px;
+    color: lemonchiffon;
+    box-shadow: 4px 5px #888888;
+    background-color: darkolivegreen;
+    font-size: 15px;
+}
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
